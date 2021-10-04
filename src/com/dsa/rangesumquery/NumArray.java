@@ -7,16 +7,16 @@ public class NumArray {
     public NumArray(int[] nums) {
         sumTemp = new int[nums.length];
         sumTemp[0] = nums[0];
-        for(int i = 1; i<nums.length;i++){
-            sumTemp[i]=sumTemp[i-1]+nums[i];
+        for (int i = 1; i < nums.length; i++) {
+            sumTemp[i] = sumTemp[i - 1] + nums[i];
         }
     }
 
     public int sumRange(int left, int right) {
-        if(left==0){
+        if (left == 0) {
             return sumTemp[right];
         }
-        return sumTemp[right] - sumTemp[left-1];
+        return sumTemp[right] - sumTemp[left - 1];
     }
 }
 
